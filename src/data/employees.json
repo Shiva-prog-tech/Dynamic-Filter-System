@@ -1,0 +1,1413 @@
+[
+  {
+    "id": 1,
+    "name": "Aarav Jones",
+    "email": "aarav.jones1@company.com",
+    "department": "Finance",
+    "role": "Finance Manager",
+    "salary": 171000,
+    "joinDate": "2019-01-10",
+    "isActive": true,
+    "skills": [
+      "AWS",
+      "Negotiation",
+      "Node.js"
+    ],
+    "address": {
+      "city": "Toronto",
+      "state": "ON",
+      "country": "Canada"
+    },
+    "projects": 3,
+    "lastReview": "2024-07-10",
+    "performanceRating": 4.4
+  },
+  {
+    "id": 2,
+    "name": "William Rodriguez",
+    "email": "william.rodriguez2@company.com",
+    "department": "Design",
+    "role": "Senior Designer",
+    "salary": 134000,
+    "joinDate": "2021-02-26",
+    "isActive": true,
+    "skills": [
+      "AWS",
+      "GraphQL",
+      "Data Analysis",
+      "Negotiation",
+      "React"
+    ],
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    },
+    "projects": 1,
+    "lastReview": "2024-12-26",
+    "performanceRating": 4.5
+  },
+  {
+    "id": 3,
+    "name": "Ava Jones",
+    "email": "ava.jones3@company.com",
+    "department": "Product",
+    "role": "Associate PM",
+    "salary": 81000,
+    "joinDate": "2024-02-03",
+    "isActive": true,
+    "skills": [
+      "Rust",
+      "TypeScript",
+      "Python"
+    ],
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    },
+    "projects": 11,
+    "lastReview": "2025-10-06",
+    "performanceRating": 2.8
+  },
+  {
+    "id": 4,
+    "name": "Yuki Miller",
+    "email": "yuki.miller4@company.com",
+    "department": "Product",
+    "role": "Senior PM",
+    "salary": 141000,
+    "joinDate": "2018-06-25",
+    "isActive": true,
+    "skills": [
+      "AWS",
+      "Figma"
+    ],
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    },
+    "projects": 5,
+    "lastReview": "2024-04-24",
+    "performanceRating": 4.3
+  },
+  {
+    "id": 5,
+    "name": "Daniel Garcia",
+    "email": "daniel.garcia5@company.com",
+    "department": "Engineering",
+    "role": "Senior Developer",
+    "salary": 110000,
+    "joinDate": "2022-02-23",
+    "isActive": true,
+    "skills": [
+      "Docker",
+      "GraphQL",
+      "AWS",
+      "Node.js",
+      "Leadership"
+    ],
+    "address": {
+      "city": "Bangalore",
+      "state": "KA",
+      "country": "India"
+    },
+    "projects": 0,
+    "lastReview": "2024-08-04",
+    "performanceRating": 2.7
+  },
+  {
+    "id": 6,
+    "name": "Noah Hernandez",
+    "email": "noah.hernandez6@company.com",
+    "department": "Operations",
+    "role": "COO",
+    "salary": 172000,
+    "joinDate": "2023-08-23",
+    "isActive": true,
+    "skills": [
+      "Rust",
+      "SEO",
+      "Docker",
+      "Kubernetes",
+      "GraphQL"
+    ],
+    "address": {
+      "city": "Bangalore",
+      "state": "KA",
+      "country": "India"
+    },
+    "projects": 2,
+    "lastReview": "2024-11-03",
+    "performanceRating": 2.5
+  },
+  {
+    "id": 7,
+    "name": "John Garcia",
+    "email": "john.garcia7@company.com",
+    "department": "Engineering",
+    "role": "Staff Engineer",
+    "salary": 186000,
+    "joinDate": "2019-09-14",
+    "isActive": true,
+    "skills": [
+      "GraphQL",
+      "Figma",
+      "Negotiation",
+      "TypeScript"
+    ],
+    "address": {
+      "city": "London",
+      "state": "England",
+      "country": "UK"
+    },
+    "projects": 1,
+    "lastReview": "2025-10-09",
+    "performanceRating": 4.1
+  },
+  {
+    "id": 8,
+    "name": "Linda Miller",
+    "email": "linda.miller8@company.com",
+    "department": "Operations",
+    "role": "Operations Manager",
+    "salary": 117000,
+    "joinDate": "2019-02-01",
+    "isActive": true,
+    "skills": [
+      "AWS",
+      "Node.js",
+      "Go",
+      "Data Analysis",
+      "SQL"
+    ],
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    },
+    "projects": 12,
+    "lastReview": "2023-02-16",
+    "performanceRating": 4.9
+  },
+  {
+    "id": 9,
+    "name": "Joseph Davis",
+    "email": "joseph.davis9@company.com",
+    "department": "Human Resources",
+    "role": "HR Coordinator",
+    "salary": 104000,
+    "joinDate": "2022-01-21",
+    "isActive": true,
+    "skills": [
+      "SEO",
+      "Figma",
+      "Rust",
+      "Project Management"
+    ],
+    "address": {
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA"
+    },
+    "projects": 0,
+    "lastReview": "2023-12-03",
+    "performanceRating": 3.2
+  },
+  {
+    "id": 10,
+    "name": "Thomas Johnson",
+    "email": "thomas.johnson10@company.com",
+    "department": "Design",
+    "role": "Design Lead",
+    "salary": 158000,
+    "joinDate": "2023-07-13",
+    "isActive": true,
+    "skills": [
+      "SEO",
+      "React"
+    ],
+    "address": {
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA"
+    },
+    "projects": 6,
+    "lastReview": "2023-05-21",
+    "performanceRating": 3.6
+  },
+  {
+    "id": 11,
+    "name": "David Johnson",
+    "email": "david.johnson11@company.com",
+    "department": "Sales",
+    "role": "Sales Manager",
+    "salary": 213000,
+    "joinDate": "2021-04-18",
+    "isActive": true,
+    "skills": [
+      "Communication",
+      "Node.js",
+      "Kubernetes"
+    ],
+    "address": {
+      "city": "London",
+      "state": "England",
+      "country": "UK"
+    },
+    "projects": 8,
+    "lastReview": "2024-12-21",
+    "performanceRating": 2.9
+  },
+  {
+    "id": 12,
+    "name": "Patricia Jones",
+    "email": "patricia.jones12@company.com",
+    "department": "Operations",
+    "role": "Operations Manager",
+    "salary": 112000,
+    "joinDate": "2021-11-03",
+    "isActive": false,
+    "skills": [
+      "Kubernetes",
+      "SEO"
+    ],
+    "address": {
+      "city": "Singapore",
+      "state": "Central",
+      "country": "Singapore"
+    },
+    "projects": 9,
+    "lastReview": "2024-08-10",
+    "performanceRating": 4.1
+  },
+  {
+    "id": 13,
+    "name": "William Lopez",
+    "email": "william.lopez13@company.com",
+    "department": "Engineering",
+    "role": "Senior Developer",
+    "salary": 150000,
+    "joinDate": "2017-08-27",
+    "isActive": true,
+    "skills": [
+      "Data Analysis",
+      "Node.js",
+      "Kubernetes",
+      "AWS"
+    ],
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    },
+    "projects": 4,
+    "lastReview": "2023-09-09",
+    "performanceRating": 3.2
+  },
+  {
+    "id": 14,
+    "name": "Maria Khan",
+    "email": "maria.khan14@company.com",
+    "department": "Engineering",
+    "role": "Junior Developer",
+    "salary": 100000,
+    "joinDate": "2023-11-21",
+    "isActive": true,
+    "skills": [
+      "Project Management",
+      "Data Analysis",
+      "GraphQL",
+      "AWS",
+      "Node.js"
+    ],
+    "address": {
+      "city": "Toronto",
+      "state": "ON",
+      "country": "Canada"
+    },
+    "projects": 5,
+    "lastReview": "2023-01-10",
+    "performanceRating": 4.1
+  },
+  {
+    "id": 15,
+    "name": "Yuki Johnson",
+    "email": "yuki.johnson15@company.com",
+    "department": "Engineering",
+    "role": "Junior Developer",
+    "salary": 55000,
+    "joinDate": "2016-12-11",
+    "isActive": false,
+    "skills": [
+      "Python",
+      "AWS",
+      "Node.js"
+    ],
+    "address": {
+      "city": "Toronto",
+      "state": "ON",
+      "country": "Canada"
+    },
+    "projects": 1,
+    "lastReview": "2024-08-04",
+    "performanceRating": 4.3
+  },
+  {
+    "id": 16,
+    "name": "Emily Kim",
+    "email": "emily.kim16@company.com",
+    "department": "Engineering",
+    "role": "Staff Engineer",
+    "salary": 206000,
+    "joinDate": "2020-04-17",
+    "isActive": true,
+    "skills": [
+      "React",
+      "Kubernetes",
+      "AWS",
+      "Project Management",
+      "TypeScript"
+    ],
+    "address": {
+      "city": "London",
+      "state": "England",
+      "country": "UK"
+    },
+    "projects": 7,
+    "lastReview": "2024-12-01",
+    "performanceRating": 3.8
+  },
+  {
+    "id": 17,
+    "name": "John Kim",
+    "email": "john.kim17@company.com",
+    "department": "Human Resources",
+    "role": "HR Manager",
+    "salary": 162000,
+    "joinDate": "2021-06-06",
+    "isActive": true,
+    "skills": [
+      "Docker",
+      "Rust",
+      "React",
+      "Negotiation"
+    ],
+    "address": {
+      "city": "Toronto",
+      "state": "ON",
+      "country": "Canada"
+    },
+    "projects": 7,
+    "lastReview": "2024-11-10",
+    "performanceRating": 3.1
+  },
+  {
+    "id": 18,
+    "name": "Lucas Khan",
+    "email": "lucas.khan18@company.com",
+    "department": "Sales",
+    "role": "Account Executive",
+    "salary": 93000,
+    "joinDate": "2016-03-17",
+    "isActive": true,
+    "skills": [
+      "TypeScript",
+      "Communication",
+      "SQL"
+    ],
+    "address": {
+      "city": "London",
+      "state": "England",
+      "country": "UK"
+    },
+    "projects": 12,
+    "lastReview": "2025-04-09",
+    "performanceRating": 2.6
+  },
+  {
+    "id": 19,
+    "name": "Michael Kim",
+    "email": "michael.kim19@company.com",
+    "department": "Finance",
+    "role": "Finance Manager",
+    "salary": 136000,
+    "joinDate": "2024-11-22",
+    "isActive": true,
+    "skills": [
+      "Communication",
+      "Kubernetes"
+    ],
+    "address": {
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA"
+    },
+    "projects": 0,
+    "lastReview": "2023-07-12",
+    "performanceRating": 4.3
+  },
+  {
+    "id": 20,
+    "name": "Anna Rodriguez",
+    "email": "anna.rodriguez20@company.com",
+    "department": "Marketing",
+    "role": "Marketing Manager",
+    "salary": 153000,
+    "joinDate": "2022-10-17",
+    "isActive": false,
+    "skills": [
+      "GraphQL",
+      "TypeScript",
+      "SQL",
+      "Go"
+    ],
+    "address": {
+      "city": "London",
+      "state": "England",
+      "country": "UK"
+    },
+    "projects": 12,
+    "lastReview": "2023-11-09",
+    "performanceRating": 2.9
+  },
+  {
+    "id": 21,
+    "name": "James Gonzalez",
+    "email": "james.gonzalez21@company.com",
+    "department": "Marketing",
+    "role": "Marketing Manager",
+    "salary": 161000,
+    "joinDate": "2020-01-24",
+    "isActive": true,
+    "skills": [
+      "Project Management",
+      "GraphQL"
+    ],
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    },
+    "projects": 7,
+    "lastReview": "2024-11-05",
+    "performanceRating": 3.2
+  },
+  {
+    "id": 22,
+    "name": "Olivia Khan",
+    "email": "olivia.khan22@company.com",
+    "department": "Operations",
+    "role": "COO",
+    "salary": 201000,
+    "joinDate": "2018-03-21",
+    "isActive": true,
+    "skills": [
+      "Go",
+      "Node.js",
+      "Negotiation",
+      "Figma",
+      "Rust"
+    ],
+    "address": {
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA"
+    },
+    "projects": 5,
+    "lastReview": "2024-04-05",
+    "performanceRating": 3.6
+  },
+  {
+    "id": 23,
+    "name": "Richard Singh",
+    "email": "richard.singh23@company.com",
+    "department": "Marketing",
+    "role": "Marketing Associate",
+    "salary": 115000,
+    "joinDate": "2019-09-04",
+    "isActive": false,
+    "skills": [
+      "SEO",
+      "TypeScript"
+    ],
+    "address": {
+      "city": "New York",
+      "state": "NY",
+      "country": "USA"
+    },
+    "projects": 3,
+    "lastReview": "2024-06-18",
+    "performanceRating": 4
+  },
+  {
+    "id": 24,
+    "name": "David Hernandez",
+    "email": "david.hernandez24@company.com",
+    "department": "Engineering",
+    "role": "Developer",
+    "salary": 57000,
+    "joinDate": "2020-09-07",
+    "isActive": true,
+    "skills": [
+      "Python",
+      "React"
+    ],
+    "address": {
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA"
+    },
+    "projects": 6,
+    "lastReview": "2025-05-26",
+    "performanceRating": 4.1
+  },
+  {
+    "id": 25,
+    "name": "Emily Kim",
+    "email": "emily.kim25@company.com",
+    "department": "Human Resources",
+    "role": "People Partner",
+    "salary": 108000,
+    "joinDate": "2018-08-23",
+    "isActive": false,
+    "skills": [
+      "Kubernetes",
+      "Node.js",
+      "Project Management",
+      "Figma",
+      "SEO"
+    ],
+    "address": {
+      "city": "Singapore",
+      "state": "Central",
+      "country": "Singapore"
+    },
+    "projects": 11,
+    "lastReview": "2025-09-22",
+    "performanceRating": 4
+  },
+  {
+    "id": 26,
+    "name": "Daniel Brown",
+    "email": "daniel.brown26@company.com",
+    "department": "Marketing",
+    "role": "Marketing Manager",
+    "salary": 131000,
+    "joinDate": "2024-08-27",
+    "isActive": true,
+    "skills": [
+      "Data Analysis",
+      "Leadership",
+      "Communication"
+    ],
+    "address": {
+      "city": "Boston",
+      "state": "MA",
+      "country": "USA"
+    },
+    "projects": 4,
+    "lastReview": "2025-04-18",
+    "performanceRating": 2.6
+  },
+  {
+    "id": 27,
+    "name": "Laura Gonzalez",
+    "email": "laura.gonzalez27@company.com",
+    "department": "Engineering",
+    "role": "Senior Developer",
+    "salary": 213000,
+    "joinDate": "2019-12-15",
+    "isActive": true,
+    "skills": [
+      "Figma",
+      "Python"
+    ],
+    "address": {
+      "city": "London",
+      "state": "England",
+      "country": "UK"
+    },
+    "projects": 10,
+    "lastReview": "2024-09-02",
+    "performanceRating": 3.7
+  },
+  {
+    "id": 28,
+    "name": "Chen Williams",
+    "email": "chen.williams28@company.com",
+    "department": "Sales",
+    "role": "Sales Rep",
+    "salary": 88000,
+    "joinDate": "2018-07-18",
+    "isActive": true,
+    "skills": [
+      "GraphQL",
+      "Python",
+      "SQL"
+    ],
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    },
+    "projects": 12,
+    "lastReview": "2025-09-16",
+    "performanceRating": 4.6
+  },
+  {
+    "id": 29,
+    "name": "Fatima Kim",
+    "email": "fatima.kim29@company.com",
+    "department": "Marketing",
+    "role": "Marketing Associate",
+    "salary": 62000,
+    "joinDate": "2017-01-04",
+    "isActive": true,
+    "skills": [
+      "Python",
+      "Go",
+      "TypeScript"
+    ],
+    "address": {
+      "city": "London",
+      "state": "England",
+      "country": "UK"
+    },
+    "projects": 12,
+    "lastReview": "2025-03-09",
+    "performanceRating": 2.6
+  },
+  {
+    "id": 30,
+    "name": "Olivia Johnson",
+    "email": "olivia.johnson30@company.com",
+    "department": "Operations",
+    "role": "Operations Manager",
+    "salary": 175000,
+    "joinDate": "2022-01-19",
+    "isActive": false,
+    "skills": [
+      "Docker",
+      "Leadership",
+      "SQL",
+      "Project Management"
+    ],
+    "address": {
+      "city": "Toronto",
+      "state": "ON",
+      "country": "Canada"
+    },
+    "projects": 8,
+    "lastReview": "2024-12-26",
+    "performanceRating": 3.6
+  },
+  {
+    "id": 31,
+    "name": "Anna Singh",
+    "email": "anna.singh31@company.com",
+    "department": "Marketing",
+    "role": "Marketing Associate",
+    "salary": 79000,
+    "joinDate": "2024-08-01",
+    "isActive": true,
+    "skills": [
+      "Go",
+      "Communication"
+    ],
+    "address": {
+      "city": "Bangalore",
+      "state": "KA",
+      "country": "India"
+    },
+    "projects": 0,
+    "lastReview": "2023-10-01",
+    "performanceRating": 3
+  },
+  {
+    "id": 32,
+    "name": "James Wilson",
+    "email": "james.wilson32@company.com",
+    "department": "Human Resources",
+    "role": "HR Coordinator",
+    "salary": 74000,
+    "joinDate": "2019-08-07",
+    "isActive": true,
+    "skills": [
+      "Communication",
+      "Python"
+    ],
+    "address": {
+      "city": "London",
+      "state": "England",
+      "country": "UK"
+    },
+    "projects": 6,
+    "lastReview": "2025-12-15",
+    "performanceRating": 4.8
+  },
+  {
+    "id": 33,
+    "name": "Olivia Gonzalez",
+    "email": "olivia.gonzalez33@company.com",
+    "department": "Product",
+    "role": "Senior PM",
+    "salary": 194000,
+    "joinDate": "2017-02-08",
+    "isActive": true,
+    "skills": [
+      "Kubernetes",
+      "GraphQL",
+      "Leadership",
+      "SQL",
+      "Node.js"
+    ],
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    },
+    "projects": 5,
+    "lastReview": "2023-11-21",
+    "performanceRating": 2.9
+  },
+  {
+    "id": 34,
+    "name": "Michael Smith",
+    "email": "michael.smith34@company.com",
+    "department": "Finance",
+    "role": "Finance Manager",
+    "salary": 110000,
+    "joinDate": "2021-05-10",
+    "isActive": false,
+    "skills": [
+      "TypeScript",
+      "SEO"
+    ],
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    },
+    "projects": 10,
+    "lastReview": "2025-09-05",
+    "performanceRating": 3.9
+  },
+  {
+    "id": 35,
+    "name": "Maria Martinez",
+    "email": "maria.martinez35@company.com",
+    "department": "Product",
+    "role": "Director of Product",
+    "salary": 114000,
+    "joinDate": "2024-03-26",
+    "isActive": true,
+    "skills": [
+      "Data Analysis",
+      "AWS"
+    ],
+    "address": {
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA"
+    },
+    "projects": 3,
+    "lastReview": "2023-11-23",
+    "performanceRating": 2.9
+  },
+  {
+    "id": 36,
+    "name": "Joseph Smith",
+    "email": "joseph.smith36@company.com",
+    "department": "Sales",
+    "role": "Sales Manager",
+    "salary": 178000,
+    "joinDate": "2019-09-22",
+    "isActive": false,
+    "skills": [
+      "GraphQL",
+      "Go",
+      "Docker",
+      "Rust"
+    ],
+    "address": {
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA"
+    },
+    "projects": 5,
+    "lastReview": "2023-07-08",
+    "performanceRating": 3.4
+  },
+  {
+    "id": 37,
+    "name": "Fatima Patel",
+    "email": "fatima.patel37@company.com",
+    "department": "Product",
+    "role": "Senior PM",
+    "salary": 164000,
+    "joinDate": "2021-01-02",
+    "isActive": true,
+    "skills": [
+      "TypeScript",
+      "Docker",
+      "Python",
+      "React"
+    ],
+    "address": {
+      "city": "London",
+      "state": "England",
+      "country": "UK"
+    },
+    "projects": 3,
+    "lastReview": "2024-06-09",
+    "performanceRating": 3.9
+  },
+  {
+    "id": 38,
+    "name": "Laura Gonzalez",
+    "email": "laura.gonzalez38@company.com",
+    "department": "Product",
+    "role": "Product Manager",
+    "salary": 196000,
+    "joinDate": "2020-05-15",
+    "isActive": true,
+    "skills": [
+      "Rust",
+      "Negotiation",
+      "TypeScript"
+    ],
+    "address": {
+      "city": "London",
+      "state": "England",
+      "country": "UK"
+    },
+    "projects": 7,
+    "lastReview": "2024-08-04",
+    "performanceRating": 3.8
+  },
+  {
+    "id": 39,
+    "name": "David Jones",
+    "email": "david.jones39@company.com",
+    "department": "Product",
+    "role": "Associate PM",
+    "salary": 83000,
+    "joinDate": "2023-03-23",
+    "isActive": true,
+    "skills": [
+      "AWS",
+      "Leadership",
+      "Figma",
+      "Project Management"
+    ],
+    "address": {
+      "city": "Bangalore",
+      "state": "KA",
+      "country": "India"
+    },
+    "projects": 1,
+    "lastReview": "2025-07-22",
+    "performanceRating": 4.7
+  },
+  {
+    "id": 40,
+    "name": "Fatima Kim",
+    "email": "fatima.kim40@company.com",
+    "department": "Sales",
+    "role": "Sales Manager",
+    "salary": 189000,
+    "joinDate": "2024-08-24",
+    "isActive": true,
+    "skills": [
+      "Data Analysis",
+      "AWS",
+      "Figma",
+      "Leadership",
+      "SQL"
+    ],
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    },
+    "projects": 2,
+    "lastReview": "2023-09-12",
+    "performanceRating": 4.3
+  },
+  {
+    "id": 41,
+    "name": "James Wilson",
+    "email": "james.wilson41@company.com",
+    "department": "Marketing",
+    "role": "Marketing Associate",
+    "salary": 59000,
+    "joinDate": "2021-04-11",
+    "isActive": true,
+    "skills": [
+      "GraphQL",
+      "Communication",
+      "SQL"
+    ],
+    "address": {
+      "city": "Seattle",
+      "state": "WA",
+      "country": "USA"
+    },
+    "projects": 8,
+    "lastReview": "2025-04-02",
+    "performanceRating": 4.2
+  },
+  {
+    "id": 42,
+    "name": "William Garcia",
+    "email": "william.garcia42@company.com",
+    "department": "Design",
+    "role": "UX Designer",
+    "salary": 105000,
+    "joinDate": "2018-07-09",
+    "isActive": true,
+    "skills": [
+      "SQL",
+      "Rust",
+      "Negotiation",
+      "Project Management",
+      "SEO"
+    ],
+    "address": {
+      "city": "Toronto",
+      "state": "ON",
+      "country": "Canada"
+    },
+    "projects": 3,
+    "lastReview": "2025-10-12",
+    "performanceRating": 2.6
+  },
+  {
+    "id": 43,
+    "name": "Lucas Lopez",
+    "email": "lucas.lopez43@company.com",
+    "department": "Product",
+    "role": "Director of Product",
+    "salary": 126000,
+    "joinDate": "2019-01-03",
+    "isActive": true,
+    "skills": [
+      "Go",
+      "GraphQL",
+      "React"
+    ],
+    "address": {
+      "city": "Toronto",
+      "state": "ON",
+      "country": "Canada"
+    },
+    "projects": 11,
+    "lastReview": "2024-01-07",
+    "performanceRating": 4.4
+  },
+  {
+    "id": 44,
+    "name": "Chen Smith",
+    "email": "chen.smith44@company.com",
+    "department": "Finance",
+    "role": "Senior Analyst",
+    "salary": 190000,
+    "joinDate": "2023-09-28",
+    "isActive": true,
+    "skills": [
+      "AWS",
+      "Node.js",
+      "Figma",
+      "Go"
+    ],
+    "address": {
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA"
+    },
+    "projects": 5,
+    "lastReview": "2025-06-07",
+    "performanceRating": 3.1
+  },
+  {
+    "id": 45,
+    "name": "Emily Williams",
+    "email": "emily.williams45@company.com",
+    "department": "Human Resources",
+    "role": "HR Manager",
+    "salary": 165000,
+    "joinDate": "2022-09-21",
+    "isActive": true,
+    "skills": [
+      "Communication",
+      "Figma"
+    ],
+    "address": {
+      "city": "Berlin",
+      "state": "Berlin",
+      "country": "Germany"
+    },
+    "projects": 11,
+    "lastReview": "2024-06-17",
+    "performanceRating": 4.1
+  },
+  {
+    "id": 46,
+    "name": "Patricia Hernandez",
+    "email": "patricia.hernandez46@company.com",
+    "department": "Design",
+    "role": "Senior Designer",
+    "salary": 155000,
+    "joinDate": "2017-06-27",
+    "isActive": false,
+    "skills": [
+      "Python",
+      "SEO",
+      "Figma",
+      "Negotiation"
+    ],
+    "address": {
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA"
+    },
+    "projects": 0,
+    "lastReview": "2025-08-18",
+    "performanceRating": 4
+  },
+  {
+    "id": 47,
+    "name": "Olivia Anderson",
+    "email": "olivia.anderson47@company.com",
+    "department": "Design",
+    "role": "Senior Designer",
+    "salary": 195000,
+    "joinDate": "2019-06-11",
+    "isActive": true,
+    "skills": [
+      "GraphQL",
+      "Data Analysis",
+      "Communication",
+      "Figma"
+    ],
+    "address": {
+      "city": "Toronto",
+      "state": "ON",
+      "country": "Canada"
+    },
+    "projects": 10,
+    "lastReview": "2023-11-21",
+    "performanceRating": 3.5
+  },
+  {
+    "id": 48,
+    "name": "Daniel Davis",
+    "email": "daniel.davis48@company.com",
+    "department": "Sales",
+    "role": "Sales Rep",
+    "salary": 99000,
+    "joinDate": "2019-09-03",
+    "isActive": true,
+    "skills": [
+      "React",
+      "Node.js",
+      "AWS",
+      "Rust",
+      "TypeScript"
+    ],
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    },
+    "projects": 6,
+    "lastReview": "2025-10-28",
+    "performanceRating": 4.9
+  },
+  {
+    "id": 49,
+    "name": "Noah Davis",
+    "email": "noah.davis49@company.com",
+    "department": "Engineering",
+    "role": "Developer",
+    "salary": 86000,
+    "joinDate": "2022-08-24",
+    "isActive": true,
+    "skills": [
+      "Leadership",
+      "Go",
+      "Negotiation"
+    ],
+    "address": {
+      "city": "London",
+      "state": "England",
+      "country": "UK"
+    },
+    "projects": 12,
+    "lastReview": "2025-10-22",
+    "performanceRating": 5
+  },
+  {
+    "id": 50,
+    "name": "Maria Kim",
+    "email": "maria.kim50@company.com",
+    "department": "Product",
+    "role": "Product Manager",
+    "salary": 174000,
+    "joinDate": "2020-09-18",
+    "isActive": true,
+    "skills": [
+      "SEO",
+      "Project Management",
+      "Go",
+      "React"
+    ],
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    },
+    "projects": 6,
+    "lastReview": "2024-04-25",
+    "performanceRating": 3.9
+  },
+  {
+    "id": 51,
+    "name": "Sarah Wilson",
+    "email": "sarah.wilson51@company.com",
+    "department": "Engineering",
+    "role": "Junior Developer",
+    "salary": 67000,
+    "joinDate": "2017-03-03",
+    "isActive": false,
+    "skills": [
+      "SQL",
+      "Docker",
+      "Node.js",
+      "Kubernetes",
+      "AWS"
+    ],
+    "address": {
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA"
+    },
+    "projects": 4,
+    "lastReview": "2023-01-04",
+    "performanceRating": 2.9
+  },
+  {
+    "id": 52,
+    "name": "Maria Miller",
+    "email": "maria.miller52@company.com",
+    "department": "Engineering",
+    "role": "Junior Developer",
+    "salary": 100000,
+    "joinDate": "2019-07-12",
+    "isActive": false,
+    "skills": [
+      "Project Management",
+      "Docker",
+      "Data Analysis",
+      "Communication",
+      "Figma"
+    ],
+    "address": {
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "USA"
+    },
+    "projects": 9,
+    "lastReview": "2024-09-10",
+    "performanceRating": 3.3
+  },
+  {
+    "id": 53,
+    "name": "Robert Nguyen",
+    "email": "robert.nguyen53@company.com",
+    "department": "Marketing",
+    "role": "Marketing Manager",
+    "salary": 158000,
+    "joinDate": "2017-04-23",
+    "isActive": false,
+    "skills": [
+      "Rust",
+      "Communication",
+      "SEO",
+      "Python"
+    ],
+    "address": {
+      "city": "Berlin",
+      "state": "Berlin",
+      "country": "Germany"
+    },
+    "projects": 8,
+    "lastReview": "2023-10-26",
+    "performanceRating": 5
+  },
+  {
+    "id": 54,
+    "name": "Michael Singh",
+    "email": "michael.singh54@company.com",
+    "department": "Operations",
+    "role": "COO",
+    "salary": 165000,
+    "joinDate": "2023-04-06",
+    "isActive": true,
+    "skills": [
+      "Kubernetes",
+      "GraphQL",
+      "Negotiation"
+    ],
+    "address": {
+      "city": "Singapore",
+      "state": "Central",
+      "country": "Singapore"
+    },
+    "projects": 9,
+    "lastReview": "2024-01-21",
+    "performanceRating": 4.3
+  },
+  {
+    "id": 55,
+    "name": "Priya Rodriguez",
+    "email": "priya.rodriguez55@company.com",
+    "department": "Product",
+    "role": "Product Manager",
+    "salary": 180000,
+    "joinDate": "2017-02-09",
+    "isActive": true,
+    "skills": [
+      "TypeScript",
+      "React",
+      "Kubernetes",
+      "Leadership",
+      "Go"
+    ],
+    "address": {
+      "city": "Singapore",
+      "state": "Central",
+      "country": "Singapore"
+    },
+    "projects": 8,
+    "lastReview": "2024-12-03",
+    "performanceRating": 4.6
+  },
+  {
+    "id": 56,
+    "name": "Mia Khan",
+    "email": "mia.khan56@company.com",
+    "department": "Engineering",
+    "role": "Junior Developer",
+    "salary": 62000,
+    "joinDate": "2018-06-23",
+    "isActive": true,
+    "skills": [
+      "Negotiation",
+      "Kubernetes",
+      "Python",
+      "TypeScript",
+      "Figma"
+    ],
+    "address": {
+      "city": "Seattle",
+      "state": "WA",
+      "country": "USA"
+    },
+    "projects": 3,
+    "lastReview": "2024-07-13",
+    "performanceRating": 3.8
+  },
+  {
+    "id": 57,
+    "name": "Michael Kim",
+    "email": "michael.kim57@company.com",
+    "department": "Marketing",
+    "role": "Marketing Manager",
+    "salary": 201000,
+    "joinDate": "2016-10-11",
+    "isActive": true,
+    "skills": [
+      "Go",
+      "Python",
+      "AWS"
+    ],
+    "address": {
+      "city": "Singapore",
+      "state": "Central",
+      "country": "Singapore"
+    },
+    "projects": 5,
+    "lastReview": "2024-10-01",
+    "performanceRating": 4.8
+  },
+  {
+    "id": 58,
+    "name": "Laura Brown",
+    "email": "laura.brown58@company.com",
+    "department": "Product",
+    "role": "Associate PM",
+    "salary": 112000,
+    "joinDate": "2021-05-14",
+    "isActive": true,
+    "skills": [
+      "AWS",
+      "Project Management",
+      "SEO"
+    ],
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA"
+    },
+    "projects": 10,
+    "lastReview": "2023-01-13",
+    "performanceRating": 3.8
+  },
+  {
+    "id": 59,
+    "name": "James Miller",
+    "email": "james.miller59@company.com",
+    "department": "Operations",
+    "role": "Ops Associate",
+    "salary": 106000,
+    "joinDate": "2019-12-14",
+    "isActive": true,
+    "skills": [
+      "GraphQL",
+      "Project Management"
+    ],
+    "address": {
+      "city": "Berlin",
+      "state": "Berlin",
+      "country": "Germany"
+    },
+    "projects": 3,
+    "lastReview": "2023-08-11",
+    "performanceRating": 3.5
+  },
+  {
+    "id": 60,
+    "name": "Laura Martinez",
+    "email": "laura.martinez60@company.com",
+    "department": "Marketing",
+    "role": "Marketing Associate",
+    "salary": 64000,
+    "joinDate": "2021-07-09",
+    "isActive": true,
+    "skills": [
+      "Leadership",
+      "SEO"
+    ],
+    "address": {
+      "city": "Berlin",
+      "state": "Berlin",
+      "country": "Germany"
+    },
+    "projects": 6,
+    "lastReview": "2025-02-27",
+    "performanceRating": 4
+  }
+]

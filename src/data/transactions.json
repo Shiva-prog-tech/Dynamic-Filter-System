@@ -1,0 +1,1281 @@
+[
+  {
+    "id": 1,
+    "transactionId": "TXN-100001",
+    "customer": "Massive Dynamic",
+    "amount": 4984.46,
+    "currency": "INR",
+    "paymentMethod": "Wallet",
+    "status": "Completed",
+    "isRefunded": false,
+    "category": "Upgrade",
+    "tags": [
+      "international",
+      "priority"
+    ],
+    "createdAt": "2025-07-16",
+    "merchant": {
+      "name": "WebDirect",
+      "city": "London",
+      "country": "UK"
+    }
+  },
+  {
+    "id": 2,
+    "transactionId": "TXN-100002",
+    "customer": "Acme Corp",
+    "amount": 2707.14,
+    "currency": "GBP",
+    "paymentMethod": "UPI",
+    "status": "Failed",
+    "isRefunded": false,
+    "category": "Subscription",
+    "tags": [
+      "international",
+      "priority",
+      "first-purchase",
+      "flagged"
+    ],
+    "createdAt": "2026-09-02",
+    "merchant": {
+      "name": "RetailX",
+      "city": "Mumbai",
+      "country": "India"
+    }
+  },
+  {
+    "id": 3,
+    "transactionId": "TXN-100003",
+    "customer": "Globex",
+    "amount": 9733.77,
+    "currency": "INR",
+    "paymentMethod": "Card",
+    "status": "Completed",
+    "isRefunded": false,
+    "category": "Refund",
+    "tags": [
+      "first-purchase"
+    ],
+    "createdAt": "2025-08-23",
+    "merchant": {
+      "name": "WebDirect",
+      "city": "London",
+      "country": "UK"
+    }
+  },
+  {
+    "id": 4,
+    "transactionId": "TXN-100004",
+    "customer": "Soylent",
+    "amount": 3418.52,
+    "currency": "EUR",
+    "paymentMethod": "Card",
+    "status": "Pending",
+    "isRefunded": false,
+    "category": "Upgrade",
+    "tags": [
+      "recurring",
+      "manual-review",
+      "discounted"
+    ],
+    "createdAt": "2024-05-10",
+    "merchant": {
+      "name": "AppStore",
+      "city": "Cupertino",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 5,
+    "transactionId": "TXN-100005",
+    "customer": "Soylent",
+    "amount": 2991.03,
+    "currency": "GBP",
+    "paymentMethod": "Card",
+    "status": "Pending",
+    "isRefunded": false,
+    "category": "Refund",
+    "tags": [
+      "priority",
+      "discounted",
+      "first-purchase",
+      "international"
+    ],
+    "createdAt": "2024-02-12",
+    "merchant": {
+      "name": "PartnerHub",
+      "city": "Berlin",
+      "country": "Germany"
+    }
+  },
+  {
+    "id": 6,
+    "transactionId": "TXN-100006",
+    "customer": "Aperture",
+    "amount": 6550.22,
+    "currency": "INR",
+    "paymentMethod": "Bank",
+    "status": "Failed",
+    "isRefunded": true,
+    "category": "One-time",
+    "tags": [
+      "manual-review",
+      "priority",
+      "flagged"
+    ],
+    "createdAt": "2024-12-07",
+    "merchant": {
+      "name": "WebDirect",
+      "city": "London",
+      "country": "UK"
+    }
+  },
+  {
+    "id": 7,
+    "transactionId": "TXN-100007",
+    "customer": "Pied Piper",
+    "amount": 2124.31,
+    "currency": "GBP",
+    "paymentMethod": "Bank",
+    "status": "Refunded",
+    "isRefunded": true,
+    "category": "Upgrade",
+    "tags": [
+      "first-purchase",
+      "manual-review"
+    ],
+    "createdAt": "2024-11-24",
+    "merchant": {
+      "name": "AppStore",
+      "city": "Cupertino",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 8,
+    "transactionId": "TXN-100008",
+    "customer": "Aperture",
+    "amount": 8297.4,
+    "currency": "INR",
+    "paymentMethod": "UPI",
+    "status": "Pending",
+    "isRefunded": false,
+    "category": "Add-on",
+    "tags": [
+      "international"
+    ],
+    "createdAt": "2024-03-16",
+    "merchant": {
+      "name": "AppStore",
+      "city": "Cupertino",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 9,
+    "transactionId": "TXN-100009",
+    "customer": "Tyrell Corp",
+    "amount": 8165.42,
+    "currency": "GBP",
+    "paymentMethod": "Wallet",
+    "status": "Pending",
+    "isRefunded": false,
+    "category": "Add-on",
+    "tags": [
+      "discounted",
+      "flagged",
+      "recurring"
+    ],
+    "createdAt": "2024-11-07",
+    "merchant": {
+      "name": "RetailX",
+      "city": "Mumbai",
+      "country": "India"
+    }
+  },
+  {
+    "id": 10,
+    "transactionId": "TXN-100010",
+    "customer": "Pied Piper",
+    "amount": 9349.25,
+    "currency": "USD",
+    "paymentMethod": "Bank",
+    "status": "Completed",
+    "isRefunded": false,
+    "category": "Add-on",
+    "tags": [
+      "first-purchase"
+    ],
+    "createdAt": "2026-02-17",
+    "merchant": {
+      "name": "PartnerHub",
+      "city": "Berlin",
+      "country": "Germany"
+    }
+  },
+  {
+    "id": 11,
+    "transactionId": "TXN-100011",
+    "customer": "Wonka Inc",
+    "amount": 6139.89,
+    "currency": "EUR",
+    "paymentMethod": "Card",
+    "status": "Completed",
+    "isRefunded": false,
+    "category": "Upgrade",
+    "tags": [
+      "discounted",
+      "first-purchase"
+    ],
+    "createdAt": "2024-07-07",
+    "merchant": {
+      "name": "PlayMarket",
+      "city": "Mountain View",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 12,
+    "transactionId": "TXN-100012",
+    "customer": "Acme Corp",
+    "amount": 2965.23,
+    "currency": "EUR",
+    "paymentMethod": "Card",
+    "status": "Failed",
+    "isRefunded": false,
+    "category": "Subscription",
+    "tags": [
+      "priority",
+      "recurring"
+    ],
+    "createdAt": "2025-06-25",
+    "merchant": {
+      "name": "AppStore",
+      "city": "Cupertino",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 13,
+    "transactionId": "TXN-100013",
+    "customer": "Wonka Inc",
+    "amount": 840.56,
+    "currency": "EUR",
+    "paymentMethod": "Wallet",
+    "status": "Refunded",
+    "isRefunded": true,
+    "category": "Subscription",
+    "tags": [
+      "priority",
+      "flagged",
+      "high-value"
+    ],
+    "createdAt": "2026-03-05",
+    "merchant": {
+      "name": "RetailX",
+      "city": "Mumbai",
+      "country": "India"
+    }
+  },
+  {
+    "id": 14,
+    "transactionId": "TXN-100014",
+    "customer": "Aperture",
+    "amount": 797.91,
+    "currency": "GBP",
+    "paymentMethod": "Bank",
+    "status": "Completed",
+    "isRefunded": false,
+    "category": "Refund",
+    "tags": [
+      "high-value"
+    ],
+    "createdAt": "2024-11-18",
+    "merchant": {
+      "name": "PlayMarket",
+      "city": "Mountain View",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 15,
+    "transactionId": "TXN-100015",
+    "customer": "Acme Corp",
+    "amount": 4709.83,
+    "currency": "INR",
+    "paymentMethod": "Wallet",
+    "status": "Pending",
+    "isRefunded": false,
+    "category": "Upgrade",
+    "tags": [
+      "first-purchase",
+      "international",
+      "discounted"
+    ],
+    "createdAt": "2024-06-20",
+    "merchant": {
+      "name": "WebDirect",
+      "city": "London",
+      "country": "UK"
+    }
+  },
+  {
+    "id": 16,
+    "transactionId": "TXN-100016",
+    "customer": "Soylent",
+    "amount": 4799.68,
+    "currency": "EUR",
+    "paymentMethod": "Card",
+    "status": "Pending",
+    "isRefunded": false,
+    "category": "Refund",
+    "tags": [
+      "priority"
+    ],
+    "createdAt": "2026-11-09",
+    "merchant": {
+      "name": "PartnerHub",
+      "city": "Berlin",
+      "country": "Germany"
+    }
+  },
+  {
+    "id": 17,
+    "transactionId": "TXN-100017",
+    "customer": "Soylent",
+    "amount": 4125.4,
+    "currency": "EUR",
+    "paymentMethod": "Wallet",
+    "status": "Refunded",
+    "isRefunded": true,
+    "category": "Subscription",
+    "tags": [
+      "high-value",
+      "recurring"
+    ],
+    "createdAt": "2024-11-25",
+    "merchant": {
+      "name": "WebDirect",
+      "city": "London",
+      "country": "UK"
+    }
+  },
+  {
+    "id": 18,
+    "transactionId": "TXN-100018",
+    "customer": "Wonka Inc",
+    "amount": 3248.74,
+    "currency": "INR",
+    "paymentMethod": "Bank",
+    "status": "Pending",
+    "isRefunded": true,
+    "category": "Refund",
+    "tags": [
+      "high-value"
+    ],
+    "createdAt": "2025-10-06",
+    "merchant": {
+      "name": "AppStore",
+      "city": "Cupertino",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 19,
+    "transactionId": "TXN-100019",
+    "customer": "Umbrella",
+    "amount": 2814.44,
+    "currency": "GBP",
+    "paymentMethod": "UPI",
+    "status": "Refunded",
+    "isRefunded": true,
+    "category": "One-time",
+    "tags": [
+      "high-value",
+      "recurring",
+      "international",
+      "first-purchase"
+    ],
+    "createdAt": "2026-12-11",
+    "merchant": {
+      "name": "RetailX",
+      "city": "Mumbai",
+      "country": "India"
+    }
+  },
+  {
+    "id": 20,
+    "transactionId": "TXN-100020",
+    "customer": "Umbrella",
+    "amount": 9838.82,
+    "currency": "GBP",
+    "paymentMethod": "Wallet",
+    "status": "Refunded",
+    "isRefunded": true,
+    "category": "Add-on",
+    "tags": [
+      "priority",
+      "international"
+    ],
+    "createdAt": "2024-04-08",
+    "merchant": {
+      "name": "PartnerHub",
+      "city": "Berlin",
+      "country": "Germany"
+    }
+  },
+  {
+    "id": 21,
+    "transactionId": "TXN-100021",
+    "customer": "Umbrella",
+    "amount": 8518.24,
+    "currency": "USD",
+    "paymentMethod": "Bank",
+    "status": "Pending",
+    "isRefunded": false,
+    "category": "One-time",
+    "tags": [
+      "manual-review",
+      "discounted"
+    ],
+    "createdAt": "2025-09-26",
+    "merchant": {
+      "name": "AppStore",
+      "city": "Cupertino",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 22,
+    "transactionId": "TXN-100022",
+    "customer": "Aperture",
+    "amount": 8668.51,
+    "currency": "GBP",
+    "paymentMethod": "Card",
+    "status": "Refunded",
+    "isRefunded": true,
+    "category": "Refund",
+    "tags": [
+      "recurring",
+      "international"
+    ],
+    "createdAt": "2024-10-06",
+    "merchant": {
+      "name": "PartnerHub",
+      "city": "Berlin",
+      "country": "Germany"
+    }
+  },
+  {
+    "id": 23,
+    "transactionId": "TXN-100023",
+    "customer": "Acme Corp",
+    "amount": 4722.87,
+    "currency": "USD",
+    "paymentMethod": "UPI",
+    "status": "Refunded",
+    "isRefunded": true,
+    "category": "One-time",
+    "tags": [
+      "high-value",
+      "priority"
+    ],
+    "createdAt": "2026-10-23",
+    "merchant": {
+      "name": "PartnerHub",
+      "city": "Berlin",
+      "country": "Germany"
+    }
+  },
+  {
+    "id": 24,
+    "transactionId": "TXN-100024",
+    "customer": "Globex",
+    "amount": 298.58,
+    "currency": "USD",
+    "paymentMethod": "Bank",
+    "status": "Failed",
+    "isRefunded": false,
+    "category": "Refund",
+    "tags": [
+      "flagged",
+      "first-purchase",
+      "recurring"
+    ],
+    "createdAt": "2024-10-19",
+    "merchant": {
+      "name": "WebDirect",
+      "city": "London",
+      "country": "UK"
+    }
+  },
+  {
+    "id": 25,
+    "transactionId": "TXN-100025",
+    "customer": "Pied Piper",
+    "amount": 7059.18,
+    "currency": "INR",
+    "paymentMethod": "UPI",
+    "status": "Completed",
+    "isRefunded": false,
+    "category": "Upgrade",
+    "tags": [
+      "flagged",
+      "manual-review",
+      "international",
+      "first-purchase"
+    ],
+    "createdAt": "2024-01-05",
+    "merchant": {
+      "name": "RetailX",
+      "city": "Mumbai",
+      "country": "India"
+    }
+  },
+  {
+    "id": 26,
+    "transactionId": "TXN-100026",
+    "customer": "Tyrell Corp",
+    "amount": 1466.15,
+    "currency": "INR",
+    "paymentMethod": "Wallet",
+    "status": "Completed",
+    "isRefunded": false,
+    "category": "Upgrade",
+    "tags": [
+      "priority"
+    ],
+    "createdAt": "2026-09-14",
+    "merchant": {
+      "name": "RetailX",
+      "city": "Mumbai",
+      "country": "India"
+    }
+  },
+  {
+    "id": 27,
+    "transactionId": "TXN-100027",
+    "customer": "Cyberdyne",
+    "amount": 3705.61,
+    "currency": "USD",
+    "paymentMethod": "Card",
+    "status": "Refunded",
+    "isRefunded": true,
+    "category": "Add-on",
+    "tags": [
+      "priority"
+    ],
+    "createdAt": "2025-10-28",
+    "merchant": {
+      "name": "PartnerHub",
+      "city": "Berlin",
+      "country": "Germany"
+    }
+  },
+  {
+    "id": 28,
+    "transactionId": "TXN-100028",
+    "customer": "Soylent",
+    "amount": 1154.3,
+    "currency": "EUR",
+    "paymentMethod": "Bank",
+    "status": "Failed",
+    "isRefunded": true,
+    "category": "Refund",
+    "tags": [
+      "international"
+    ],
+    "createdAt": "2026-11-14",
+    "merchant": {
+      "name": "AppStore",
+      "city": "Cupertino",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 29,
+    "transactionId": "TXN-100029",
+    "customer": "Cyberdyne",
+    "amount": 1361.52,
+    "currency": "EUR",
+    "paymentMethod": "UPI",
+    "status": "Pending",
+    "isRefunded": false,
+    "category": "One-time",
+    "tags": [
+      "manual-review",
+      "flagged"
+    ],
+    "createdAt": "2024-08-01",
+    "merchant": {
+      "name": "PlayMarket",
+      "city": "Mountain View",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 30,
+    "transactionId": "TXN-100030",
+    "customer": "Hooli",
+    "amount": 8839.82,
+    "currency": "INR",
+    "paymentMethod": "Bank",
+    "status": "Pending",
+    "isRefunded": false,
+    "category": "One-time",
+    "tags": [
+      "manual-review"
+    ],
+    "createdAt": "2024-06-09",
+    "merchant": {
+      "name": "WebDirect",
+      "city": "London",
+      "country": "UK"
+    }
+  },
+  {
+    "id": 31,
+    "transactionId": "TXN-100031",
+    "customer": "Cyberdyne",
+    "amount": 2297.18,
+    "currency": "EUR",
+    "paymentMethod": "Wallet",
+    "status": "Completed",
+    "isRefunded": false,
+    "category": "Upgrade",
+    "tags": [
+      "priority"
+    ],
+    "createdAt": "2024-10-22",
+    "merchant": {
+      "name": "PlayMarket",
+      "city": "Mountain View",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 32,
+    "transactionId": "TXN-100032",
+    "customer": "Stark Industries",
+    "amount": 2809.27,
+    "currency": "GBP",
+    "paymentMethod": "Wallet",
+    "status": "Failed",
+    "isRefunded": false,
+    "category": "One-time",
+    "tags": [
+      "international",
+      "priority"
+    ],
+    "createdAt": "2026-12-12",
+    "merchant": {
+      "name": "PlayMarket",
+      "city": "Mountain View",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 33,
+    "transactionId": "TXN-100033",
+    "customer": "Wonka Inc",
+    "amount": 4203.36,
+    "currency": "USD",
+    "paymentMethod": "UPI",
+    "status": "Failed",
+    "isRefunded": false,
+    "category": "Subscription",
+    "tags": [
+      "discounted",
+      "international"
+    ],
+    "createdAt": "2026-05-19",
+    "merchant": {
+      "name": "PartnerHub",
+      "city": "Berlin",
+      "country": "Germany"
+    }
+  },
+  {
+    "id": 34,
+    "transactionId": "TXN-100034",
+    "customer": "Stark Industries",
+    "amount": 7690.18,
+    "currency": "EUR",
+    "paymentMethod": "UPI",
+    "status": "Refunded",
+    "isRefunded": true,
+    "category": "Add-on",
+    "tags": [
+      "international",
+      "high-value",
+      "recurring"
+    ],
+    "createdAt": "2024-10-18",
+    "merchant": {
+      "name": "RetailX",
+      "city": "Mumbai",
+      "country": "India"
+    }
+  },
+  {
+    "id": 35,
+    "transactionId": "TXN-100035",
+    "customer": "Acme Corp",
+    "amount": 2004.23,
+    "currency": "GBP",
+    "paymentMethod": "UPI",
+    "status": "Refunded",
+    "isRefunded": true,
+    "category": "Subscription",
+    "tags": [
+      "manual-review",
+      "high-value",
+      "discounted",
+      "flagged"
+    ],
+    "createdAt": "2024-07-05",
+    "merchant": {
+      "name": "PlayMarket",
+      "city": "Mountain View",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 36,
+    "transactionId": "TXN-100036",
+    "customer": "Initech",
+    "amount": 794.57,
+    "currency": "GBP",
+    "paymentMethod": "Wallet",
+    "status": "Failed",
+    "isRefunded": true,
+    "category": "Upgrade",
+    "tags": [
+      "high-value",
+      "manual-review"
+    ],
+    "createdAt": "2024-11-24",
+    "merchant": {
+      "name": "WebDirect",
+      "city": "London",
+      "country": "UK"
+    }
+  },
+  {
+    "id": 37,
+    "transactionId": "TXN-100037",
+    "customer": "Wayne Enterprises",
+    "amount": 5488.57,
+    "currency": "GBP",
+    "paymentMethod": "Card",
+    "status": "Failed",
+    "isRefunded": false,
+    "category": "Refund",
+    "tags": [
+      "priority",
+      "high-value"
+    ],
+    "createdAt": "2025-02-07",
+    "merchant": {
+      "name": "AppStore",
+      "city": "Cupertino",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 38,
+    "transactionId": "TXN-100038",
+    "customer": "Acme Corp",
+    "amount": 5247.54,
+    "currency": "GBP",
+    "paymentMethod": "Bank",
+    "status": "Failed",
+    "isRefunded": false,
+    "category": "Upgrade",
+    "tags": [
+      "flagged",
+      "international"
+    ],
+    "createdAt": "2026-12-05",
+    "merchant": {
+      "name": "AppStore",
+      "city": "Cupertino",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 39,
+    "transactionId": "TXN-100039",
+    "customer": "Tyrell Corp",
+    "amount": 9003.71,
+    "currency": "INR",
+    "paymentMethod": "Card",
+    "status": "Pending",
+    "isRefunded": false,
+    "category": "Add-on",
+    "tags": [
+      "priority",
+      "high-value"
+    ],
+    "createdAt": "2026-06-03",
+    "merchant": {
+      "name": "PartnerHub",
+      "city": "Berlin",
+      "country": "Germany"
+    }
+  },
+  {
+    "id": 40,
+    "transactionId": "TXN-100040",
+    "customer": "Pied Piper",
+    "amount": 8182.71,
+    "currency": "USD",
+    "paymentMethod": "UPI",
+    "status": "Refunded",
+    "isRefunded": true,
+    "category": "One-time",
+    "tags": [
+      "priority",
+      "high-value"
+    ],
+    "createdAt": "2026-01-19",
+    "merchant": {
+      "name": "PlayMarket",
+      "city": "Mountain View",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 41,
+    "transactionId": "TXN-100041",
+    "customer": "Wayne Enterprises",
+    "amount": 4771.88,
+    "currency": "GBP",
+    "paymentMethod": "Bank",
+    "status": "Completed",
+    "isRefunded": false,
+    "category": "Subscription",
+    "tags": [
+      "international",
+      "priority",
+      "manual-review",
+      "discounted"
+    ],
+    "createdAt": "2025-04-21",
+    "merchant": {
+      "name": "PlayMarket",
+      "city": "Mountain View",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 42,
+    "transactionId": "TXN-100042",
+    "customer": "Initech",
+    "amount": 1850.4,
+    "currency": "USD",
+    "paymentMethod": "Bank",
+    "status": "Completed",
+    "isRefunded": false,
+    "category": "Upgrade",
+    "tags": [
+      "high-value",
+      "flagged"
+    ],
+    "createdAt": "2026-04-23",
+    "merchant": {
+      "name": "WebDirect",
+      "city": "London",
+      "country": "UK"
+    }
+  },
+  {
+    "id": 43,
+    "transactionId": "TXN-100043",
+    "customer": "Pied Piper",
+    "amount": 8129.34,
+    "currency": "GBP",
+    "paymentMethod": "UPI",
+    "status": "Pending",
+    "isRefunded": false,
+    "category": "Refund",
+    "tags": [
+      "discounted"
+    ],
+    "createdAt": "2024-11-16",
+    "merchant": {
+      "name": "PartnerHub",
+      "city": "Berlin",
+      "country": "Germany"
+    }
+  },
+  {
+    "id": 44,
+    "transactionId": "TXN-100044",
+    "customer": "Hooli",
+    "amount": 4305.38,
+    "currency": "EUR",
+    "paymentMethod": "UPI",
+    "status": "Pending",
+    "isRefunded": false,
+    "category": "Add-on",
+    "tags": [
+      "manual-review",
+      "high-value",
+      "flagged",
+      "first-purchase"
+    ],
+    "createdAt": "2025-11-02",
+    "merchant": {
+      "name": "WebDirect",
+      "city": "London",
+      "country": "UK"
+    }
+  },
+  {
+    "id": 45,
+    "transactionId": "TXN-100045",
+    "customer": "Massive Dynamic",
+    "amount": 4826.43,
+    "currency": "USD",
+    "paymentMethod": "UPI",
+    "status": "Pending",
+    "isRefunded": false,
+    "category": "Upgrade",
+    "tags": [
+      "manual-review",
+      "international",
+      "priority",
+      "high-value"
+    ],
+    "createdAt": "2024-01-20",
+    "merchant": {
+      "name": "PlayMarket",
+      "city": "Mountain View",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 46,
+    "transactionId": "TXN-100046",
+    "customer": "Initech",
+    "amount": 1501.64,
+    "currency": "GBP",
+    "paymentMethod": "Wallet",
+    "status": "Failed",
+    "isRefunded": false,
+    "category": "Upgrade",
+    "tags": [
+      "first-purchase",
+      "international",
+      "manual-review",
+      "flagged"
+    ],
+    "createdAt": "2024-11-27",
+    "merchant": {
+      "name": "RetailX",
+      "city": "Mumbai",
+      "country": "India"
+    }
+  },
+  {
+    "id": 47,
+    "transactionId": "TXN-100047",
+    "customer": "Wayne Enterprises",
+    "amount": 4809.76,
+    "currency": "GBP",
+    "paymentMethod": "UPI",
+    "status": "Failed",
+    "isRefunded": false,
+    "category": "Add-on",
+    "tags": [
+      "recurring",
+      "high-value"
+    ],
+    "createdAt": "2025-09-05",
+    "merchant": {
+      "name": "RetailX",
+      "city": "Mumbai",
+      "country": "India"
+    }
+  },
+  {
+    "id": 48,
+    "transactionId": "TXN-100048",
+    "customer": "Hooli",
+    "amount": 7607.42,
+    "currency": "EUR",
+    "paymentMethod": "Bank",
+    "status": "Refunded",
+    "isRefunded": true,
+    "category": "Subscription",
+    "tags": [
+      "high-value",
+      "flagged"
+    ],
+    "createdAt": "2025-03-20",
+    "merchant": {
+      "name": "AppStore",
+      "city": "Cupertino",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 49,
+    "transactionId": "TXN-100049",
+    "customer": "Pied Piper",
+    "amount": 2015.5,
+    "currency": "USD",
+    "paymentMethod": "Wallet",
+    "status": "Refunded",
+    "isRefunded": true,
+    "category": "Add-on",
+    "tags": [
+      "recurring",
+      "first-purchase",
+      "flagged",
+      "international"
+    ],
+    "createdAt": "2026-09-17",
+    "merchant": {
+      "name": "PartnerHub",
+      "city": "Berlin",
+      "country": "Germany"
+    }
+  },
+  {
+    "id": 50,
+    "transactionId": "TXN-100050",
+    "customer": "Wayne Enterprises",
+    "amount": 4472.16,
+    "currency": "GBP",
+    "paymentMethod": "Card",
+    "status": "Completed",
+    "isRefunded": true,
+    "category": "Subscription",
+    "tags": [
+      "manual-review",
+      "priority"
+    ],
+    "createdAt": "2026-08-09",
+    "merchant": {
+      "name": "PartnerHub",
+      "city": "Berlin",
+      "country": "Germany"
+    }
+  },
+  {
+    "id": 51,
+    "transactionId": "TXN-100051",
+    "customer": "Soylent",
+    "amount": 4165.35,
+    "currency": "EUR",
+    "paymentMethod": "Bank",
+    "status": "Pending",
+    "isRefunded": true,
+    "category": "One-time",
+    "tags": [
+      "recurring",
+      "discounted",
+      "high-value"
+    ],
+    "createdAt": "2026-07-24",
+    "merchant": {
+      "name": "AppStore",
+      "city": "Cupertino",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 52,
+    "transactionId": "TXN-100052",
+    "customer": "Massive Dynamic",
+    "amount": 2947.3,
+    "currency": "GBP",
+    "paymentMethod": "Card",
+    "status": "Refunded",
+    "isRefunded": true,
+    "category": "Add-on",
+    "tags": [
+      "first-purchase"
+    ],
+    "createdAt": "2024-02-04",
+    "merchant": {
+      "name": "AppStore",
+      "city": "Cupertino",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 53,
+    "transactionId": "TXN-100053",
+    "customer": "Umbrella",
+    "amount": 5973.67,
+    "currency": "USD",
+    "paymentMethod": "UPI",
+    "status": "Pending",
+    "isRefunded": false,
+    "category": "Upgrade",
+    "tags": [
+      "high-value"
+    ],
+    "createdAt": "2024-12-06",
+    "merchant": {
+      "name": "RetailX",
+      "city": "Mumbai",
+      "country": "India"
+    }
+  },
+  {
+    "id": 54,
+    "transactionId": "TXN-100054",
+    "customer": "Stark Industries",
+    "amount": 92.32,
+    "currency": "USD",
+    "paymentMethod": "Wallet",
+    "status": "Pending",
+    "isRefunded": false,
+    "category": "Refund",
+    "tags": [
+      "high-value",
+      "priority"
+    ],
+    "createdAt": "2026-04-20",
+    "merchant": {
+      "name": "AppStore",
+      "city": "Cupertino",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 55,
+    "transactionId": "TXN-100055",
+    "customer": "Soylent",
+    "amount": 992.03,
+    "currency": "USD",
+    "paymentMethod": "UPI",
+    "status": "Pending",
+    "isRefunded": false,
+    "category": "One-time",
+    "tags": [
+      "priority",
+      "international"
+    ],
+    "createdAt": "2026-11-27",
+    "merchant": {
+      "name": "WebDirect",
+      "city": "London",
+      "country": "UK"
+    }
+  },
+  {
+    "id": 56,
+    "transactionId": "TXN-100056",
+    "customer": "Umbrella",
+    "amount": 6005.23,
+    "currency": "USD",
+    "paymentMethod": "Card",
+    "status": "Refunded",
+    "isRefunded": true,
+    "category": "Upgrade",
+    "tags": [
+      "international"
+    ],
+    "createdAt": "2024-12-01",
+    "merchant": {
+      "name": "WebDirect",
+      "city": "London",
+      "country": "UK"
+    }
+  },
+  {
+    "id": 57,
+    "transactionId": "TXN-100057",
+    "customer": "Black Mesa",
+    "amount": 5689.61,
+    "currency": "USD",
+    "paymentMethod": "UPI",
+    "status": "Completed",
+    "isRefunded": false,
+    "category": "Subscription",
+    "tags": [
+      "international",
+      "manual-review",
+      "first-purchase"
+    ],
+    "createdAt": "2026-12-25",
+    "merchant": {
+      "name": "WebDirect",
+      "city": "London",
+      "country": "UK"
+    }
+  },
+  {
+    "id": 58,
+    "transactionId": "TXN-100058",
+    "customer": "Initech",
+    "amount": 1760.89,
+    "currency": "INR",
+    "paymentMethod": "Wallet",
+    "status": "Failed",
+    "isRefunded": false,
+    "category": "Upgrade",
+    "tags": [
+      "flagged",
+      "discounted",
+      "recurring",
+      "manual-review"
+    ],
+    "createdAt": "2024-10-01",
+    "merchant": {
+      "name": "RetailX",
+      "city": "Mumbai",
+      "country": "India"
+    }
+  },
+  {
+    "id": 59,
+    "transactionId": "TXN-100059",
+    "customer": "Umbrella",
+    "amount": 3172.78,
+    "currency": "INR",
+    "paymentMethod": "UPI",
+    "status": "Refunded",
+    "isRefunded": true,
+    "category": "Refund",
+    "tags": [
+      "priority",
+      "recurring",
+      "discounted",
+      "flagged"
+    ],
+    "createdAt": "2025-02-07",
+    "merchant": {
+      "name": "PlayMarket",
+      "city": "Mountain View",
+      "country": "USA"
+    }
+  },
+  {
+    "id": 60,
+    "transactionId": "TXN-100060",
+    "customer": "Umbrella",
+    "amount": 9587.08,
+    "currency": "USD",
+    "paymentMethod": "Bank",
+    "status": "Failed",
+    "isRefunded": false,
+    "category": "Upgrade",
+    "tags": [
+      "manual-review",
+      "flagged",
+      "discounted"
+    ],
+    "createdAt": "2024-03-21",
+    "merchant": {
+      "name": "RetailX",
+      "city": "Mumbai",
+      "country": "India"
+    }
+  }
+]
