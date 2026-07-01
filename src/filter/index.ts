@@ -37,6 +37,10 @@ export { applyFilters, matchCondition, buildFieldMap } from './engine';
 export { validateCondition, isConditionComplete } from './validation';
 export type { ValidationResult } from './validation';
 
+// Highlighting (table match highlighting)
+export { buildHighlights } from './highlight';
+export type { Highlight, HighlightMap } from './highlight';
+
 // Utilities
 export {
   getValueByPath,

@@ -22,8 +22,13 @@ export function MultiSelectValueInput({
   options,
   counts,
 }: MultiSelectValueInputProps) {
-  const selectedKeys = value.map(keyOf);
-  const selectedOpts = options.filter((o) => selectedKeys.includes(keyOf(o.value)));
+  // Build the selected options from `value` (not by filtering `options`) so a
+  // persisted selection isn't silently dropped when it isn't in the current
+  // options — e.g. options are still loading, or the data changed. Unknown
+  // values are shown with a synthesized label instead of vanishing.
+  const selectedOpts = value.map(
+    (v) => options.find((o) => keyOf(o.value) === keyOf(v)) ?? { label: String(v), value: v },
+  );
 
   return (
     <Autocomplete

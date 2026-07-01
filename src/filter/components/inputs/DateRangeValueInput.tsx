@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { format, isValid, parseISO } from 'date-fns';
 import type { DateRangeValue, Operator } from '../../types';
@@ -45,10 +45,17 @@ export function DateRangeValueInput({
   const v = value ?? { from: null, to: null };
 
   if (operator === 'last7days' || operator === 'last30days') {
+    const label = operator === 'last7days' ? 'Last 7 days' : 'Last 30 days';
     return (
-      <Typography variant="body2" color="text.secondary" sx={{ py: 1 }}>
-        Relative to today — no date input needed.
-      </Typography>
+      <TextField
+        disabled
+        size="small"
+        fullWidth
+        value={label}
+        label="Relative range"
+        helperText="Relative to today — no date entry needed"
+        inputProps={{ 'aria-label': `Date range: ${label.toLowerCase()}, relative to today` }}
+      />
     );
   }
 

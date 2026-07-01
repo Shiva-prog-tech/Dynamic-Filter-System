@@ -53,10 +53,13 @@ export function DatasetView<T>({
   const facets = useFacets(data, controller.conditions, fields);
 
   const [copied, setCopied] = useState(false);
+  const [copyFailed, setCopyFailed] = useState(false);
   const handleCopyLink = async () => {
     const url = window.location.href;
+    let success = false;
     try {
       await navigator.clipboard.writeText(url);
+      success = true;
     } catch {
       // Clipboard API blocked (e.g. insecure context) — fall back to a temp field.
       const el = document.createElement('input');
@@ -64,13 +67,15 @@ export function DatasetView<T>({
       document.body.appendChild(el);
       el.select();
       try {
-        document.execCommand('copy');
+        success = document.execCommand('copy');
       } catch {
-        /* give up silently */
+        success = false;
       }
       document.body.removeChild(el);
     }
-    setCopied(true);
+    // Only claim success when a copy actually happened — no false confirmation.
+    if (success) setCopied(true);
+    else setCopyFailed(true);
   };
 
   const toolbar = (
@@ -153,6 +158,17 @@ export function DatasetView<T>({
       >
         <Alert severity="success" variant="filled" onClose={() => setCopied(false)} sx={{ borderRadius: 2 }}>
           Link copied — your filters travel with it.
+        </Alert>
+      </Snackbar>
+
+      <Snackbar
+        open={copyFailed}
+        autoHideDuration={4000}
+        onClose={() => setCopyFailed(false)}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
+        <Alert severity="error" variant="filled" onClose={() => setCopyFailed(false)} sx={{ borderRadius: 2 }}>
+          Couldn’t copy automatically — copy the URL from the address bar instead.
         </Alert>
       </Snackbar>
     </Stack>

@@ -28,6 +28,9 @@ export function Sparkline({
 }: SparklineProps) {
   const theme = useTheme();
 
+  // Guard against a caller passing bins <= 0 (would make width Infinity → NaN).
+  const binCount = Number.isFinite(bins) && bins > 0 ? Math.floor(bins) : 32;
+
   const { bars, hasData } = useMemo(() => {
     if (values.length === 0) return { bars: [] as { h: number; active: boolean }[], hasData: false };
 
@@ -38,10 +41,10 @@ export function Sparkline({
       min -= 0.5;
       max += 0.5;
     }
-    const width = (max - min) / bins;
-    const counts = new Array(bins).fill(0) as number[];
+    const width = (max - min) / binCount;
+    const counts = new Array(binCount).fill(0) as number[];
     for (const v of values) {
-      const idx = Math.min(bins - 1, Math.max(0, Math.floor((v - min) / width)));
+      const idx = Math.min(binCount - 1, Math.max(0, Math.floor((v - min) / width)));
       counts[idx] = (counts[idx] ?? 0) + 1;
     }
     const peak = Math.max(...counts, 1);
@@ -56,7 +59,7 @@ export function Sparkline({
       return { h: count / peak, active };
     });
     return { bars: result, hasData: true };
-  }, [values, selectionMin, selectionMax, bins]);
+  }, [values, selectionMin, selectionMax, binCount]);
 
   if (!hasData) return null;
 
@@ -69,7 +72,7 @@ export function Sparkline({
       <svg
         width="100%"
         height={height}
-        viewBox={`0 0 ${bins} 100`}
+        viewBox={`0 0 ${binCount} 100`}
         preserveAspectRatio="none"
         role="presentation"
       >

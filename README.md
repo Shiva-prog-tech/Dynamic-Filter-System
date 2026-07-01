@@ -256,6 +256,7 @@ npm run build      # outputs to dist/
 - **Facets are relative to the *other* filters** — each field's counts/distribution exclude that field's own conditions, so they show what adding an option *would* yield (proper faceted search), not a static tally.
 - **Match highlighting reuses the engine's `matchCondition`** for range predicates, so it can never drift from the actual filtering logic.
 - **Type-safety without coupling** — the generic core keeps a `string` field key; consumers opt into compile-time-checked keys via `defineFields<T>()`, which widens back to the base type (avoids the invariance a generic `key` would impose on every internal API).
+- **Clean install** — a small `overrides` block pins `uuid` and `glob` (deep, **dev-only** transitives of Storybook) to their current, non-deprecated majors, so `npm install` is warning-free. These never reach the shipped app bundle.
 
 ---
 

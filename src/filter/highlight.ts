@@ -29,6 +29,24 @@ function pushNeedle(entry: Highlight, value: unknown) {
   if (s) entry.text.push(s);
 }
 
+/**
+ * Rebuilds a minimal nested record for a (possibly dotted) field path so
+ * `matchCondition` — which resolves values via `getValueByPath` — works for
+ * nested numeric/date fields too (e.g. `metrics.score`), not just top-level.
+ */
+function makeRecord(path: string, value: unknown): Record<string, unknown> {
+  const keys = path.split('.');
+  const root: Record<string, unknown> = {};
+  let cursor = root;
+  for (let i = 0; i < keys.length - 1; i++) {
+    const next: Record<string, unknown> = {};
+    cursor[keys[i] as string] = next;
+    cursor = next;
+  }
+  cursor[keys[keys.length - 1] as string] = value;
+  return root;
+}
+
 export function buildHighlights(
   conditions: FilterCondition[],
   fieldMap: FilterFieldConfigMap,
@@ -62,7 +80,7 @@ export function buildHighlights(
       case 'date': {
         // Compose (OR) with any existing predicate for the same field.
         const prev = entry.inRange;
-        const pred = (raw: unknown) => matchCondition({ [c.field]: raw }, c, field);
+        const pred = (raw: unknown) => matchCondition(makeRecord(c.field, raw), c, field);
         entry.inRange = prev ? (raw) => prev(raw) || pred(raw) : pred;
         break;
       }

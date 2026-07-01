@@ -15,9 +15,8 @@ import TableSortLabel from '@mui/material/TableSortLabel';
 import Typography from '@mui/material/Typography';
 import { alpha } from '@mui/material/styles';
 import { Inbox, SearchX } from 'lucide-react';
-import { buildFieldMap, getValueByPath } from '../filter';
-import type { FilterCondition, FilterFieldConfig } from '../filter';
-import { buildHighlights, type HighlightMap } from '../filter/highlight';
+import { buildFieldMap, buildHighlights, getValueByPath } from '../filter';
+import type { FilterCondition, FilterFieldConfig, HighlightMap } from '../filter';
 import { DefaultCell } from './DefaultCell';
 import type { ColumnDef, SortState } from './types';
 
@@ -308,7 +307,8 @@ export function DataTable<T>({
                         sx={{
                           verticalAlign: 'top',
                           ...(tinted && {
-                            bgcolor: (t) => alpha(t.palette.primary.main, 0.09),
+                            bgcolor: (t) =>
+                              alpha(t.palette.primary.main, t.palette.mode === 'dark' ? 0.18 : 0.1),
                             boxShadow: (t) => `inset 2px 0 0 ${t.palette.primary.main}`,
                           }),
                         }}
