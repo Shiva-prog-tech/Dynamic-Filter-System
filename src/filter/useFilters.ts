@@ -19,6 +19,7 @@ import type {
   FilterValue,
   Operator,
 } from './types';
+import { decodeConditions, encodeConditions, readUrlParam, writeUrlParam } from './urlState';
 import { newId } from './utils';
 
 export interface UseFiltersOptions {
@@ -26,6 +27,12 @@ export interface UseFiltersOptions {
   initial?: FilterCondition[];
   /** When set, conditions are persisted to `localStorage` under this key. */
   persistKey?: string;
+  /**
+   * When set, conditions are mirrored to this URL query parameter, making the
+   * filtered view **deep-linkable / shareable**. On load the URL wins over
+   * `localStorage` (a shared link should override a local draft).
+   */
+  urlParam?: string;
 }
 
 export interface FilterController {
@@ -93,11 +100,14 @@ export function useFilters(
   fields: FilterFieldConfig[],
   options: UseFiltersOptions = {},
 ): FilterController {
-  const { initial = [], persistKey } = options;
+  const { initial = [], persistKey, urlParam } = options;
 
-  const [conditions, setConditions] = useState<FilterCondition[]>(
-    () => normalizePersisted(readPersisted(persistKey), fields) ?? initial,
-  );
+  const [conditions, setConditions] = useState<FilterCondition[]>(() => {
+    // Precedence: shared URL link → persisted draft → provided initial.
+    const fromUrl = urlParam ? decodeConditions(readUrlParam(urlParam)) : null;
+    const source = fromUrl ?? readPersisted(persistKey);
+    return normalizePersisted(source, fields) ?? initial;
+  });
 
   const fieldByKey = useMemo(() => {
     const map: Record<string, FilterFieldConfig> = {};
@@ -119,6 +129,13 @@ export function useFilters(
       /* storage full / unavailable — non-fatal */
     }
   }, [persistKey, conditions]);
+
+  // Mirror conditions to the URL for shareable/deep-linkable views. An empty
+  // list removes the parameter so a "no filters" view yields a clean URL.
+  useEffect(() => {
+    if (!urlParam) return;
+    writeUrlParam(urlParam, conditions.length ? encodeConditions(conditions) : null);
+  }, [urlParam, conditions]);
 
   const addCondition = useCallback(
     (fieldKey?: string) => {

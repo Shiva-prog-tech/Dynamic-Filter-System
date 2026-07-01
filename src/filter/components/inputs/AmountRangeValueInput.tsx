@@ -3,11 +3,14 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import type { AmountRangeValue } from '../../types';
+import { Sparkline } from '../Sparkline';
 
 interface AmountRangeValueInputProps {
   value: AmountRangeValue;
   onChange: (value: AmountRangeValue) => void;
   currency?: string;
+  /** Value distribution for the faceted histogram (optional). */
+  distribution?: number[];
 }
 
 /** Resolves a currency symbol (e.g. "$") from an ISO code, falling back to "#". */
@@ -39,6 +42,7 @@ export function AmountRangeValueInput({
   value,
   onChange,
   currency,
+  distribution,
 }: AmountRangeValueInputProps) {
   const v = value ?? { min: null, max: null };
   const symbol = currencySymbol(currency);
@@ -58,7 +62,11 @@ export function AmountRangeValueInput({
   const adornment = <InputAdornment position="start">{symbol}</InputAdornment>;
 
   return (
-    <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+    <Box>
+      {distribution && distribution.length > 0 && (
+        <Sparkline values={distribution} selectionMin={v.min} selectionMax={v.max} />
+      )}
+      <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
       <TextField
         size="small"
         type="number"
@@ -87,6 +95,7 @@ export function AmountRangeValueInput({
         sx={{ flex: 1, minWidth: 120 }}
         inputProps={{ 'aria-label': 'Maximum amount' }}
       />
+      </Box>
     </Box>
   );
 }

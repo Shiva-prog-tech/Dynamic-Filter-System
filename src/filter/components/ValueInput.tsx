@@ -1,3 +1,4 @@
+import type { FieldFacet } from '../useFacets';
 import type {
   AmountRangeValue,
   DateRangeValue,
@@ -18,6 +19,8 @@ interface ValueInputProps {
   field: FilterFieldConfig;
   operator: Operator;
   value: FilterValue;
+  /** Faceted metadata (counts / distribution) for this field, if available. */
+  facet?: FieldFacet;
   onChange: (value: FilterValue) => void;
 }
 
@@ -25,7 +28,7 @@ interface ValueInputProps {
  * Renders the correct value control for a field's type — the single point of
  * "type → input" dispatch. Adding a new field type means adding one `case`.
  */
-export function ValueInput({ field, operator, value, onChange }: ValueInputProps) {
+export function ValueInput({ field, operator, value, facet, onChange }: ValueInputProps) {
   switch (field.type) {
     case 'text':
       return (
@@ -51,6 +54,7 @@ export function ValueInput({ field, operator, value, onChange }: ValueInputProps
           value={(value as AmountRangeValue) ?? { min: null, max: null }}
           onChange={onChange}
           currency={field.currency}
+          distribution={facet?.values}
         />
       );
 
@@ -60,6 +64,7 @@ export function ValueInput({ field, operator, value, onChange }: ValueInputProps
           value={(value as DateRangeValue) ?? { from: null, to: null }}
           onChange={onChange}
           operator={operator}
+          distribution={facet?.values}
         />
       );
 
@@ -69,6 +74,7 @@ export function ValueInput({ field, operator, value, onChange }: ValueInputProps
           value={value as string | number | boolean | null}
           onChange={onChange}
           options={field.options ?? []}
+          counts={facet?.counts}
         />
       );
 
@@ -78,6 +84,7 @@ export function ValueInput({ field, operator, value, onChange }: ValueInputProps
           value={Array.isArray(value) ? value : []}
           onChange={onChange}
           options={field.options ?? []}
+          counts={facet?.counts}
         />
       );
 

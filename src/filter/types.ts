@@ -59,6 +59,36 @@ export interface SelectOption {
   value: string | number | boolean;
 }
 
+/* -------------------------------------------------------------------------- */
+/* Compile-time-safe field paths                                              */
+/* -------------------------------------------------------------------------- */
+
+type Primitive = string | number | boolean | bigint | symbol | null | undefined;
+
+/**
+ * The set of dot-notation paths addressable on a record of type `T` — top-level
+ * keys plus nested object paths (e.g. `"address.city"`). Arrays and primitives
+ * are treated as leaves. When `T` is `unknown`/`any` (the default), this widens
+ * to plain `string`, so the reusable core stays fully generic while a consumer
+ * that supplies its row type gets **compile-time-checked field keys**.
+ */
+export type FieldPath<T> = unknown extends T
+  ? string
+  : T extends Primitive
+    ? string
+    : T extends readonly unknown[]
+      ? string
+      : {
+          [K in keyof T & string]: NonNullable<T[K]> extends Primitive | readonly unknown[]
+            ? K
+            : K | `${K}.${FieldPath<NonNullable<T[K]>>}`;
+        }[keyof T & string];
+
+/**
+ * A filterable field definition. The reusable core uses a plain `string` key so
+ * it stays fully generic; consumers author configs through {@link defineFields}
+ * to get **compile-time-checked keys** against their row type.
+ */
 export interface FilterFieldConfig {
   /**
    * Path to the value on a record. Supports dot-notation for nested objects,
@@ -80,6 +110,25 @@ export interface FilterFieldConfig {
   currency?: string;
   /** Optional placeholder for free-text / number inputs. */
   placeholder?: string;
+}
+
+/**
+ * A field config whose `key` is constrained to the real dot-paths of row type
+ * `T`. Used at authoring time (via {@link defineFields}); the library itself
+ * only ever sees the widened {@link FilterFieldConfig}.
+ */
+export type TypedFieldConfig<T> = Omit<FilterFieldConfig, 'key'> & {
+  key: FieldPath<T>;
+};
+
+/**
+ * Authoring helper: validates every field `key` against the row type `T` at
+ * compile time (a typo like `"addres.city"` is a build error), then widens to
+ * the plain {@link FilterFieldConfig} the generic core consumes. Zero runtime
+ * cost — it returns its input unchanged.
+ */
+export function defineFields<T>(fields: TypedFieldConfig<T>[]): FilterFieldConfig[] {
+  return fields as FilterFieldConfig[];
 }
 
 /** Fast lookup of a field config by its `key`. */

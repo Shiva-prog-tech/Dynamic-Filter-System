@@ -7,14 +7,16 @@
  * select options reflect the actual data.
  */
 import Chip from '@mui/material/Chip';
-import { buildOptions, formatCurrency, formatDate } from '../filter';
+import { buildOptions, defineFields, formatCurrency, formatDate } from '../filter';
 import type { FilterFieldConfig } from '../filter';
 import type { ColumnDef } from '../table/types';
 import type { Transaction, TransactionStatus } from './types';
 
 /** Builds the transaction filter fields, deriving select options from `rows`. */
 export function buildTransactionFields(rows: Transaction[]): FilterFieldConfig[] {
-  return [
+  // `defineFields<Transaction>` type-checks every `key` (incl. `merchant.name`)
+  // against the Transaction shape at compile time.
+  return defineFields<Transaction>([
     { key: 'transactionId', label: 'Transaction ID', type: 'text', placeholder: 'e.g. TXN-1000' },
     { key: 'customer', label: 'Customer', type: 'select', options: buildOptions(rows.map((t) => t.customer)) },
     { key: 'amount', label: 'Amount', type: 'amount' },
@@ -48,7 +50,7 @@ export function buildTransactionFields(rows: Transaction[]): FilterFieldConfig[]
       type: 'select',
       options: buildOptions(rows.map((t) => t.merchant.city)),
     },
-  ];
+  ]);
 }
 
 const STATUS_COLOR: Record<TransactionStatus, 'success' | 'warning' | 'error' | 'info'> = {

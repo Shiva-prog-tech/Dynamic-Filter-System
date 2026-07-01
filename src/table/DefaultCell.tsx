@@ -1,15 +1,17 @@
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
 import Typography from '@mui/material/Typography';
+import { HighlightText } from './HighlightText';
 
 const MAX_CHIPS = 4;
 
 /**
  * Smart default renderer for a cell value when a column provides no custom
  * `render`. Handles the data variety required by the spec — arrays render as
- * chips, booleans as Yes/No chips, nullish as an em-dash.
+ * chips, booleans as Yes/No chips, nullish as an em-dash. When `needles` are
+ * supplied (from active text filters), matching substrings are highlighted.
  */
-export function DefaultCell({ value }: { value: unknown }) {
+export function DefaultCell({ value, needles }: { value: unknown; needles?: string[] }) {
   if (value == null || value === '') {
     return (
       <Typography component="span" color="text.disabled">
@@ -30,9 +32,19 @@ export function DefaultCell({ value }: { value: unknown }) {
     const extra = value.length - shown.length;
     return (
       <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
-        {shown.map((v, i) => (
-          <Chip key={`${String(v)}-${i}`} label={String(v)} size="small" variant="outlined" />
-        ))}
+        {shown.map((v, i) => {
+          const label = String(v);
+          const matched = needles?.some((n) => label.toLowerCase() === n.toLowerCase());
+          return (
+            <Chip
+              key={`${label}-${i}`}
+              label={<HighlightText text={label} needles={needles} />}
+              size="small"
+              variant={matched ? 'filled' : 'outlined'}
+              color={matched ? 'primary' : 'default'}
+            />
+          );
+        })}
         {extra > 0 && <Chip label={`+${extra}`} size="small" />}
       </Box>
     );
@@ -69,5 +81,5 @@ export function DefaultCell({ value }: { value: unknown }) {
     );
   }
 
-  return <>{String(value)}</>;
+  return <HighlightText text={String(value)} needles={needles} />;
 }

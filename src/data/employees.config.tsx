@@ -9,14 +9,16 @@
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
 import Typography from '@mui/material/Typography';
-import { buildOptions, formatCurrency, formatDate } from '../filter';
+import { buildOptions, defineFields, formatCurrency, formatDate } from '../filter';
 import type { FilterFieldConfig } from '../filter';
 import type { ColumnDef } from '../table/types';
 import type { Employee } from './types';
 
 /** Builds the employee filter fields, deriving select options from `rows`. */
 export function buildEmployeeFields(rows: Employee[]): FilterFieldConfig[] {
-  return [
+  // `defineFields<Employee>` type-checks every `key` against the Employee shape
+  // (incl. nested paths like `address.city`) at compile time.
+  return defineFields<Employee>([
     { key: 'name', label: 'Name', type: 'text', placeholder: 'e.g. John' },
     { key: 'email', label: 'Email', type: 'text', placeholder: 'e.g. @company.com' },
     {
@@ -51,7 +53,7 @@ export function buildEmployeeFields(rows: Employee[]): FilterFieldConfig[] {
     { key: 'projects', label: 'Projects', type: 'number' },
     { key: 'lastReview', label: 'Last Review', type: 'date' },
     { key: 'performanceRating', label: 'Performance Rating', type: 'number' },
-  ];
+  ]);
 }
 
 function ratingColor(rating: number): 'success' | 'warning' | 'error' {

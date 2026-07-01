@@ -15,7 +15,9 @@ import TableSortLabel from '@mui/material/TableSortLabel';
 import Typography from '@mui/material/Typography';
 import { alpha } from '@mui/material/styles';
 import { Inbox, SearchX } from 'lucide-react';
-import { getValueByPath } from '../filter';
+import { buildFieldMap, getValueByPath } from '../filter';
+import type { FilterCondition, FilterFieldConfig } from '../filter';
+import { buildHighlights, type HighlightMap } from '../filter/highlight';
 import { DefaultCell } from './DefaultCell';
 import type { ColumnDef, SortState } from './types';
 
@@ -31,6 +33,12 @@ interface DataTableProps<T> {
   /** Optional content (e.g. export buttons) rendered on the right of the header. */
   toolbar?: ReactNode;
   emptyMessage?: string;
+  /**
+   * Active filter conditions + field config — when supplied, matched text is
+   * highlighted and cells inside a matched numeric/date range are tinted.
+   */
+  conditions?: FilterCondition[];
+  fields?: FilterFieldConfig[];
 }
 
 /** Null-safe comparator: numbers numerically, everything else as natural strings. */
@@ -60,10 +68,19 @@ export function DataTable<T>({
   title,
   toolbar,
   emptyMessage = 'No records match your filters.',
+  conditions,
+  fields,
 }: DataTableProps<T>) {
   const [sort, setSort] = useState<SortState>({ key: null, direction: 'asc' });
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
+
+  // Text needles + range predicates derived from the active filters, keyed by
+  // column key. Empty when the caller doesn't opt in.
+  const highlights: HighlightMap = useMemo(() => {
+    if (!conditions || !fields || conditions.length === 0) return {};
+    return buildHighlights(conditions, buildFieldMap(fields));
+  }, [conditions, fields]);
 
   // Reset to the first page whenever the result set changes. `rows` is a new
   // reference only when the filtered output actually changes (see
@@ -280,11 +297,30 @@ export function DataTable<T>({
             ) : (
               pagedRows.map((row) => (
                 <TableRow key={rowKey(row)} hover>
-                  {columns.map((col) => (
-                    <TableCell key={col.key} align={col.align} sx={{ verticalAlign: 'top' }}>
-                      {col.render ? col.render(row) : <DefaultCell value={getValueByPath(row, col.key)} />}
-                    </TableCell>
-                  ))}
+                  {columns.map((col) => {
+                    const raw = getValueByPath(row, col.key);
+                    const hl = highlights[col.key];
+                    const tinted = hl?.inRange?.(raw) ?? false;
+                    return (
+                      <TableCell
+                        key={col.key}
+                        align={col.align}
+                        sx={{
+                          verticalAlign: 'top',
+                          ...(tinted && {
+                            bgcolor: (t) => alpha(t.palette.primary.main, 0.09),
+                            boxShadow: (t) => `inset 2px 0 0 ${t.palette.primary.main}`,
+                          }),
+                        }}
+                      >
+                        {col.render ? (
+                          col.render(row)
+                        ) : (
+                          <DefaultCell value={raw} needles={hl?.text} />
+                        )}
+                      </TableCell>
+                    );
+                  })}
                 </TableRow>
               ))
             )}

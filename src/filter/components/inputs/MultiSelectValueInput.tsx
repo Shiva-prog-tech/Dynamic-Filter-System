@@ -1,12 +1,16 @@
 import Autocomplete from '@mui/material/Autocomplete';
+import Box from '@mui/material/Box';
 import Checkbox from '@mui/material/Checkbox';
 import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
 import type { SelectOption } from '../../types';
 
 interface MultiSelectValueInputProps {
   value: (string | number)[];
   onChange: (value: (string | number)[]) => void;
   options: SelectOption[];
+  /** Faceted match counts by stringified option value (optional). */
+  counts?: Record<string, number>;
 }
 
 const keyOf = (v: unknown): string => String(v);
@@ -16,6 +20,7 @@ export function MultiSelectValueInput({
   value,
   onChange,
   options,
+  counts,
 }: MultiSelectValueInputProps) {
   const selectedKeys = value.map(keyOf);
   const selectedOpts = options.filter((o) => selectedKeys.includes(keyOf(o.value)));
@@ -34,10 +39,18 @@ export function MultiSelectValueInput({
       }
       renderOption={(props, option, { selected }) => {
         const { key, ...rest } = props as { key?: string } & Record<string, unknown>;
+        const count = counts?.[keyOf(option.value)];
         return (
           <li key={keyOf(option.value)} {...rest}>
             <Checkbox size="small" checked={selected} sx={{ mr: 1 }} />
-            {option.label}
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', gap: 2 }}>
+              <span>{option.label}</span>
+              {count !== undefined && (
+                <Typography component="span" variant="caption" color="text.secondary" sx={{ fontVariantNumeric: 'tabular-nums' }}>
+                  {count}
+                </Typography>
+              )}
+            </Box>
           </li>
         );
       }}

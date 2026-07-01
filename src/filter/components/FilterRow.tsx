@@ -3,6 +3,7 @@ import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import { alpha, useTheme } from '@mui/material/styles';
 import { AlertTriangle, Trash2 } from 'lucide-react';
+import type { FieldFacet } from '../useFacets';
 import type {
   FilterCondition,
   FilterFieldConfig,
@@ -19,6 +20,8 @@ interface FilterRowProps {
   condition: FilterCondition;
   fields: FilterFieldConfig[];
   fieldMap: FilterFieldConfigMap;
+  /** Faceted metadata for this condition's field (counts / distribution). */
+  facet?: FieldFacet;
   onFieldChange: (id: string, fieldKey: string) => void;
   onOperatorChange: (id: string, operator: Operator) => void;
   onValueChange: (id: string, value: FilterValue) => void;
@@ -35,6 +38,7 @@ export function FilterRow({
   condition,
   fields,
   fieldMap,
+  facet,
   onFieldChange,
   onOperatorChange,
   onValueChange,
@@ -93,6 +97,7 @@ export function FilterRow({
           field={field}
           operator={condition.operator}
           value={condition.value}
+          facet={facet}
           onChange={(value) => onValueChange(condition.id, value)}
         />
       </Box>

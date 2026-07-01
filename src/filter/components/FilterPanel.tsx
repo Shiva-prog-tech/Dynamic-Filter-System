@@ -13,6 +13,7 @@ import { Filter, Plus, SlidersHorizontal, Trash } from 'lucide-react';
 import { buildFieldMap } from '../engine';
 import { describeCondition } from '../describe';
 import type { FilterController } from '../useFilters';
+import type { FacetMap } from '../useFacets';
 import type { FilterFieldConfig } from '../types';
 import { validateCondition } from '../validation';
 import { FilterRow } from './FilterRow';
@@ -24,6 +25,11 @@ export interface FilterPanelProps {
   controller: FilterController;
   title?: string;
   description?: string;
+  /**
+   * Optional faceted-search metadata (see `useFacets`) — enables per-option
+   * match counts and distribution sparklines on the inputs.
+   */
+  facets?: FacetMap;
 }
 
 /**
@@ -39,6 +45,7 @@ export function FilterPanel({
   controller,
   title = 'Filters',
   description,
+  facets,
 }: FilterPanelProps) {
   const {
     conditions,
@@ -226,6 +233,7 @@ export function FilterPanel({
                     condition={condition}
                     fields={fields}
                     fieldMap={fieldMap}
+                    facet={facets?.[condition.field]}
                     onFieldChange={updateField}
                     onOperatorChange={updateOperator}
                     onValueChange={updateValue}

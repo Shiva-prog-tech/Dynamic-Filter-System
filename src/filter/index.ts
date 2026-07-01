@@ -10,7 +10,9 @@ export type {
   FieldType,
   Operator,
   SelectOption,
+  FieldPath,
   FilterFieldConfig,
+  TypedFieldConfig,
   FilterFieldConfigMap,
   FilterValue,
   FilterCondition,
@@ -18,6 +20,7 @@ export type {
   AmountRangeValue,
   OperatorOption,
 } from './types';
+export { defineFields } from './types';
 
 // Operator registry
 export {
@@ -49,6 +52,16 @@ export { useFilters } from './useFilters';
 export type { FilterController, UseFiltersOptions } from './useFilters';
 export { useFilteredData } from './useFilteredData';
 export { useDebouncedCallback } from './useDebouncedCallback';
+export { useFacets } from './useFacets';
+export type { FieldFacet, FacetMap } from './useFacets';
+
+// URL state (deep-linkable / shareable filters)
+export {
+  encodeConditions,
+  decodeConditions,
+  readUrlParam,
+  writeUrlParam,
+} from './urlState';
 
 // Components
 export { FilterPanel } from './components/FilterPanel';

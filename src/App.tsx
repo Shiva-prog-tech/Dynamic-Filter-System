@@ -18,6 +18,7 @@ import { DatasetView } from './components/DatasetView';
 import { buildEmployeeFields, employeeColumns } from './data/employees.config';
 import { buildTransactionFields, transactionColumns } from './data/transactions.config';
 import { fetchEmployees, fetchTransactions } from './api/mockApi';
+import { readUrlParam, writeUrlParam } from './filter';
 import type { Employee, Transaction } from './data/types';
 import { createAppTheme, type ThemeMode } from './theme';
 
@@ -30,7 +31,11 @@ export default function App() {
     const saved = typeof localStorage !== 'undefined' ? localStorage.getItem(THEME_KEY) : null;
     return saved === 'light' || saved === 'dark' ? saved : 'dark';
   });
-  const [dataset, setDataset] = useState<Dataset>('employees');
+  // The active dataset is part of the shareable URL, so a copied link reopens
+  // the same table (with its filters).
+  const [dataset, setDataset] = useState<Dataset>(() =>
+    readUrlParam('ds') === 'transactions' ? 'transactions' : 'employees',
+  );
 
   const theme = useMemo(() => createAppTheme(mode), [mode]);
 
@@ -41,6 +46,10 @@ export default function App() {
       /* non-fatal */
     }
   }, [mode]);
+
+  useEffect(() => {
+    writeUrlParam('ds', dataset === 'employees' ? null : dataset);
+  }, [dataset]);
 
   return (
     <ThemeProvider theme={theme}>
@@ -62,21 +71,6 @@ export default function App() {
               }}
             >
               <Box>
-                <Chip
-                  icon={<Sparkles size={14} />}
-                  label="Configuration-driven · Type-safe"
-                  size="small"
-                  sx={{
-                    mb: 1.5,
-                    px: 0.5,
-                    fontWeight: 600,
-                    color: 'primary.main',
-                    bgcolor: (t) => alpha(t.palette.primary.main, 0.12),
-                    border: '1px solid',
-                    borderColor: (t) => alpha(t.palette.primary.main, 0.3),
-                    '& .MuiChip-icon': { color: 'primary.main' },
-                  }}
-                />
                 <Typography
                   variant="h4"
                   sx={{
@@ -155,6 +149,7 @@ export default function App() {
                   columns={employeeColumns}
                   rowKey={(r) => r.id}
                   persistKey="dfs.filters.employees"
+                  urlParam="fe"
                   exportName="employees"
                 />
               ) : (
@@ -166,6 +161,7 @@ export default function App() {
                   columns={transactionColumns}
                   rowKey={(r) => r.id}
                   persistKey="dfs.filters.transactions"
+                  urlParam="ft"
                   exportName="transactions"
                 />
               )}
